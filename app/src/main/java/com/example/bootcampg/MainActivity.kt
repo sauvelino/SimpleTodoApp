@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         arrayAdapter = ArrayAdapter(this, R.layout.custom, R.id.textView, arrayList)
         listView.adapter = arrayAdapter
         input = findViewById(R.id.editText)
-        val insert = findViewById<Button>(R.id.button)
+        val insert = findViewById<ImageButton>(R.id.button)
         insert.setOnClickListener {
             val newItems = input.getText().toString()
             arrayList.add(newItems)
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         dialog.setContentView(R.layout.box)
         val editText = dialog.findViewById<EditText>(R.id.editText2)
         editText.setText(Olditem)
-        val ntn = dialog.findViewById<Button>(R.id.update)
+        val ntn = dialog.findViewById<ImageButton>(R.id.update)
         ntn.setOnClickListener {
             arrayList.set(index, editText.text.toString())
             arrayAdapter.notifyDataSetChanged()
